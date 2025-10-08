@@ -1,0 +1,25 @@
+QUICK OPTIONS - minimal effort (phone-only)
+
+OPTION 1 — Play instantly in your phone browser (FASTEST):
+1) Unzip Aeonforge_phone_ready.zip on your phone (Files app or any unzip app).
+2) Open the folder Aeonforge_phone_ready/www/
+3) Tap aeonforge_lite.html and choose Firefox (recommended) or any mobile browser that supports local files.
+   - If it doesn't open directly, open Firefox and use 'Open File' or enter the path file:///storage/emulated/0/Download/<folder>/Aeonforge_phone_ready/www/aeonforge_lite.html
+4) Game should run immediately in the browser.
+
+OPTION 2 — Run a tiny local web server on phone (if local file has issues):
+- Install an Android app like "Simple HTTP Server", point its root to the Aeonforge_phone_ready folder, start server and open the provided http://localhost:PORT/www/aeonforge_lite.html in your browser.
+
+OPTION 3 — Build an Android APK automatically via GitHub Actions (one-time setup, still phone-only):
+1) Create a new GitHub repository (via GitHub mobile app or github.com in browser).
+2) Upload ALL files from the Aeonforge_phone_ready folder into the repo (there is a .github/workflows/android-build.yml included).
+   - On mobile web you can add files manually; alternatively use the GitHub mobile app to upload or edit files.
+3) Push to the default branch (main or master). The included GitHub Actions workflow 'android-build.yml' will run and produce an APK artifact.
+4) Open the Actions tab in the GitHub repo on your phone once the workflow completes, download the APK artifact and install it on your Android device (allow 'Install from unknown sources').
+
+NOTES & LIMITATIONS:
+- This environment could not build APKs itself (see README.txt). The GitHub Actions workflow is included so you can get an APK without using a PC.
+- If you want, provide a GitHub repo URL and I will adapt the workflow further (e.g., set specific Android SDK versions or add signing steps).
+- The fastest path to play: OPTION 1 (open aeonforge_lite.html in Firefox).
+
+-- End of instructions
